@@ -1,0 +1,19 @@
+name: My First DevOps Pipeline
+on:
+ push:
+   branches: [main]
+jobs:
+  build-and-test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Step 1 - Get the code
+       uses: action/checkout@v3
+     - name: Step 2 - Show which file exist
+       run: ls -la
+     - name: Step 3 - Run a simple test
+       run: echo ' All test passed !'
+     - name: Step 4 - Show success message
+       run: echo 'pipeline complete-ready to deploy!'
+       
+
+     
